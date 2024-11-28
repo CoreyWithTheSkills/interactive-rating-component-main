@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    
+--Orange: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body{
+    background-color: var(--Very-Dark-Blue);
+    font-family: "Overpass", 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 26px;
+}
+
+.container{
+    background-color: var(--Dark-Blue);
+    width: 900px;
+    height: 900px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-content{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .container-content ul{
+    margin-bottom: 125px;
+}
+
+body p{
+    font-size: 30px;
+}
+
+h1{
+    color: var(--White);
+}
+
+p{
+    color: var(--Light-Grey);
+}
+
+li{
+    color: var(--Light-Grey);
+}
+
+.star-img{
+    width: 75px; /* Keep the image size the same */
+    height: 75px;
+    padding: 20px; /* Add padding to create more space around the image */
+    border: 2px solid var(--Light-Grey); /* Set the border color */
+    border-radius: 50%; /* Ensure the element stays circular */
+    background-color: var(--Light-Grey); /* Set the background color */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image inside the circle */
+    box-sizing: border-box; /* Ensure padding and border don't alter the circle size */
+}
+
+.container-content button {
+    background-color: var(--Orange);
+    height: 75px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5,50px);
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.grid-item{
+    border: 2px solid var(--Light-Grey); /* Set border color to gray */
+    border-radius: 50%; /* Make the element circular */
+    background-color: var(--Light-Grey); /* Set the background color to gray */
+    font-size: 26px; /* Adjust font size if needed */
+    cursor: pointer; /* Change cursor to indicate clickable items */
+    margin: 0 10px; /* Add some spacing between the circles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+}
+
+.grid-item:hover{
+    background-color: var(--Orange);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+}
+ 
+
+@media (max-width: 768px) {
+    .container{
+        width: 600px;
+    }
+
+    .container-content{
+        font-size: 24px;
+    }
+
+    .grid-container{
+        gap: 50px;
+        margin-right: 65px;
+    }
+}
+    
